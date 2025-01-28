@@ -2,31 +2,206 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Resource</title>
-    <!-- Google fonts -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Resource</title>
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- daisyui and tailwind css -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- variable -->
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                  clifford: '#da373d',
-                  fontp: '#da373d',
-            }
-            }
+  <!-- daisyui and tailwind css -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- variable -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'btn-color': '#B68C5A',
+            'para-color': '#707070'
           }
         }
-      </script>
+      }
+    }
+  </script>
+
+  <style>
+    .poppins {
+      font-family: "Poppins", serif;
+    }
+
+    .eb-garamond {
+      font-family: "EB Garamond", serif;
+    }
+
+    .menu :where(li > .menu-dropdown-toggle):after,
+    .menu :where(li > details > summary):after {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Header -->
+  <header class="max-w-[80%] mx-auto mt-10">
+    <!-- Nav bar section -->
+    <nav class="">
+      <div class="flex justify-between">
+        <div class="">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Item 1</a></li>
+              <li>
+                <a>Parent</a>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </li>
+              <li><a>Item 3</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl"><img src="./images/logo2.png" alt=""></a>
+        </div>
 
+        <div class=" hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Home
+                  <svg class="w-4 h-4 transition-transform rotate-0 group-hover:rotate-90" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Services
+                  <svg class="w-4 h-4 transition-transform rotate-0 group-hover:rotate-90" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Cases
+                  <svg class="w-4 h-4 transition-transform rotate-0 group-hover:rotate-90" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Blog
+                  <svg class="w-4 h-4 transition-transform rotate-0 group-hover:rotate-90" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Contact Us
+                  <svg class="w-4 h-4 transition-transform rotate-0 group-hover:rotate-90" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </summary>
+                <ul class="p-2">
+                  <li><a>Submenu 1</a></li>
+                  <li><a>Submenu 2</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <a class="btn text-white bg-btn-color px-7 py-4">Free Consultation</a>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Banner section -->
+    <section>
+      <div class="hero rounded-lg mt-14" style="background-image: url(./images/banner.png);">
+
+        <div class="hero-overlay rounded-lg bg-opacity-60"></div>
+        <div class="hero-content rounded-lg text-neutral-content text-center">
+          <div class="max-w-md">
+            <h1 class="eb-garamond text-white mt-12 mb-6 text-5xl font-extrabold">We Provide Effective Legal Solutions
+            </h1>
+            <p class="mb-5 font-normal text-xl">
+              Your Partner in Law – Providing Effective, Reliable, and Professional Legal Solutions to Meet Every Challenge Head-On.
+            </p>
+            <div>
+              <input type="text" placeholder="Search your services" class="input input-bordered input-primary w-full max-w-xs" />
+              <button class="btn bg-btn-color text-white border-none mt-5 mb-11 py-4 px-8">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </header>
+
+  <!-- Main -->
+  <main>
+
+  </main>
+
+  <!-- footer -->
+  <footer>
+
+  </footer>
 </body>
 
 </html>
